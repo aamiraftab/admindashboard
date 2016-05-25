@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using AdminDashboard.Common.Interfaces;
+using AdminDashboard.Service.Interfaces;
 
-namespace AdminDashboard.Service
+namespace AdminDashboard.Service.Services
 {
     public abstract class EntityService<T> : IEntityService<T>
     {

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace AdminDashboard.Service
+namespace AdminDashboard.Service.Interfaces
 {
     public interface IEntityService<T>
     {

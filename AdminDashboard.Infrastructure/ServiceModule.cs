@@ -7,7 +7,7 @@ namespace AdminDashboard.Infrastructure
     {
         protected override void Load(ContainerBuilder builder)
         {
-            builder.RegisterAssemblyTypes(Assembly.Load("SecurityAdmin.Service"))
+            builder.RegisterAssemblyTypes(Assembly.Load("AdminDashboard.Service"))
              .Where(t => t.Name.EndsWith("Service"))
              .AsImplementedInterfaces()
              .InstancePerLifetimeScope();

@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using AdminDashboard.Service;
+using AdminDashboard.Service.Interfaces;
 
 namespace AdminDashboard.Web.Mvc.Controllers
 {
@@ -11,12 +12,12 @@ namespace AdminDashboard.Web.Mvc.Controllers
             _personService = personService;
         }
         // GET: Person
-        //public ActionResult Index()
-        //{
-        //    return View();
-        //}
-
-        public JsonResult Index(int id)
+        public ActionResult Index()
+        {
+            return View();
+        }
+        [HttpPost]
+        public JsonResult GetById(int id)
         {
             return Json(_personService.GetById(id), JsonRequestBehavior.AllowGet);
         }

@@ -10,7 +10,7 @@ namespace AdminDashboard.Infrastructure
         protected override void Load(ContainerBuilder builder)
         {
             builder.RegisterGeneric(typeof(GenericRepository<>)).As(typeof(IRepository<>)).InstancePerLifetimeScope();
-            builder.RegisterAssemblyTypes(Assembly.Load("SecurityAdmin.Dal.EF"))
+            builder.RegisterAssemblyTypes(Assembly.Load("AdminDashboard.Dal.EF"))
                   .Where(t => t.Name.EndsWith("Repository"))
                   .AsImplementedInterfaces()
                  .InstancePerLifetimeScope();

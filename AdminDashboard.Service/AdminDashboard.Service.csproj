@@ -44,10 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EntityService.cs" />
-    <Compile Include="IEntityService.cs" />
-    <Compile Include="IPersonService.cs" />
-    <Compile Include="PersonService.cs" />
+    <Compile Include="ModelDTO\PersonDTO.cs" />
+    <Compile Include="Services\EntityService.cs" />
+    <Compile Include="Interfaces\IEntityService.cs" />
+    <Compile Include="Interfaces\IPersonService.cs" />
+    <Compile Include="Services\PersonService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -65,8 +66,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="..\..\..\securityadmin\SecurityAdmin\SecurityAdmin.DAL.EF\bin\Debug\EntityFramework.SqlServer.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,8 +1,9 @@
 ﻿using AdminDashboard.Common.Interfaces;
 using AdminDashboard.DAL.EF;
 using AdminDashboard.Entities.Models;
+using AdminDashboard.Service.Interfaces;
 
-namespace AdminDashboard.Service
+namespace AdminDashboard.Service.Services
 {
     public class PersonService : EntityService<Person>, IPersonService
     {

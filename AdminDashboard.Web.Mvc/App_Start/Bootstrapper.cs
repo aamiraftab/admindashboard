@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using AdminDashboard.Infrastructure;
+using AdminDashboard.Web.Mvc.Mappings;
 using Autofac;
 using Autofac.Integration.Mvc;
 
@@ -10,6 +11,8 @@ namespace AdminDashboard.Web.Mvc
         public static void Run()
         {
             SetAutofacContainer();
+            //Configure Automapper
+            AutoMapperConfiguration.Configure();
         }
 
         private static void SetAutofacContainer()
