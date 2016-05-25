@@ -19,7 +19,7 @@ namespace AdminDashboard.Web.Mvc.Controllers
         [HttpPost]
         public JsonResult GetById(int id)
         {
-            return Json(_personService.GetById(id), JsonRequestBehavior.AllowGet);
+            return Json(_personService.GetById(id));
         }
 
     }
